@@ -1,0 +1,182 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    background-color: #1A0B2E;
+    color:white;
+}
+
+
+
+
+
+/* .icon-text{
+
+  font-weight: 800;
+ 
+    -webkit-text-stroke: 1px black;
+  display: inline;
+}
+
+.icon-grad{
+  
+  background: linear-gradient( to top right, #F7E93F 0%, #FB09B4 51%, #9100F8 100% );
+
+
+
+  background-clip: text;
+  color: transparent;
+  
+ 
+} */
+/* 
+.icon-text {
+  font-weight: 800;
+  -webkit-text-stroke: 1px black;
+  display: inline;
+}
+
+.icon-grad {
+  background: linear-gradient(
+    to top right,
+    #F7E93F 0%,
+    #FB09B4 51%,
+    #9100F8 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  -webkit-text-stroke: 1px black;
+} */
+
+
+/* .icon-text {
+  font-weight: 800;
+  color: #fff;
+  display: inline;
+
+  text-shadow:
+    1px 0 0 #000,
+   -1px 0 0 #000,
+    0 1px 0 #000,
+    0 -1px 0 #000;
+}
+
+.icon-grad {
+  font-weight: 800;
+
+  background: linear-gradient(
+    to top right,
+    #F7E93F 0%,
+    #FB09B4 51%,
+    #9100F8 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  text-shadow:
+    1px 0 0 #000,
+   -1px 0 0 #000,
+    0 1px 0 #000,
+    0 -1px 0 #000;
+} */
+
+
+.icon-text {
+  font-weight: 800;
+  color: #fff;
+  display: inline;
+
+  filter:
+    drop-shadow(1px 0 0 #000)
+    drop-shadow(-1px 0 0 #000)
+    drop-shadow(0 1px 0 #000)
+    drop-shadow(0 -1px 0 #000);
+}
+
+.icon-grad {
+  font-weight: 800;
+
+  background: linear-gradient(
+    to top right,
+    #F7E93F 0%,
+    #FB09B4 51%,
+    #9100F8 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  filter:
+    drop-shadow(1px 0 0 #000)
+    drop-shadow(-1px 0 0 #000)
+    drop-shadow(0 1px 0 #000)
+    drop-shadow(0 -1px 0 #000);
+}
+
+
+
+
+.menu-items{
+  display:flex;
+  list-style: none;
+ width:218px;
+  justify-content: space-between;
+  /* color:white; */
+}
+
+.menu-items li a{
+  color:white;
+  text-decoration: none;
+  font-weight:500;
+  line-height: 120%;
+}
+
+
+.menu-button{
+  background-color:aqua;
+  font-weight:600;
+  color:white;
+  border:none;
+  border-radius: 10000px;
+ 
+}
+
+
+.menu-button-div{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding:12px 16px;
+  gap:4px;
+  
+}
+
+.menu-button-div img{
+  width:20px;
+
+}
+
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 200px;
+  border-bottom: 2px solid #412567;
+}
+
+
+
