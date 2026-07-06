@@ -1,0 +1,23 @@
+body{
+  background-color: #1A0B2E;
+}
+
+*{
+   font-family: "Inter", sans-serif;
+}
+
+
+.btn1{
+  padding:12px 16px;
+  font-weight:600;
+  color:white;
+  border-radius:1000px;
+  background: linear-gradient(30deg, #F7E93F 14%, #FB09B4 51%, #9100F8 100%);
+  border:none;
+  cursor:pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+}
