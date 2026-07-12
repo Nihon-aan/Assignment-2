@@ -1,7 +1,10 @@
+
+/* common class */
 body{
   background-color: #1A0B2E;
   max-width:1600px;
   margin:0 auto;
+  color:white;
 }
 
 *{
@@ -25,6 +28,11 @@ body{
   gap: 4px;
 
 }
+
+
+/* header section */
+
+/* nav bar */
 
 .options a{
   color:rgba(255, 255, 255, 0.9);
@@ -52,6 +60,63 @@ header nav{
 
 
 
-header{
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer section */
+
+footer .copyright{
+    color: rgba(250, 250, 250, 0.6); 
+   
+  text-align: center;
+}
+
+
+footer .social-links .social .name{
+   color: rgba(250, 250, 250, 0.6);  
+}
+
+
+footer .social-links .social{
+  display: flex;
+  gap:8px;
+  align-items: center;
+}
+
+footer .social-links{
+  display:flex;
+  align-items: center;
+  max-width:544px;
+  justify-content: space-between;
+  margin: 32px auto;
+}
+
+.footer{
+  max-width: 1380px;
+  margin: 0 auto;
+  text-align: center;
+
+
+}
+
+footer{
+ 
+  padding: 120px;
+  background-image:url('/B13-A02-TechWave/assets/footer-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
