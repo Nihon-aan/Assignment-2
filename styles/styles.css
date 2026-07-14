@@ -131,6 +131,7 @@ header nav {
 .close-sidebar-button{
   display: none;
   cursor: pointer;
+  z-index: 20;
 }
 
 
@@ -554,7 +555,7 @@ footer{
 
   #sidebar-active:checked ~ .close-sidebar-button{
     display: flex;
-    z-index: 11;
+    z-index: 30;
   }
 
   header:has(#sidebar-active:checked) .mobile{
