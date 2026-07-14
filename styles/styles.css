@@ -23,6 +23,21 @@ body{
   align-items: center;
   justify-content: center;
   gap: 4px;
+   background-size: 200% auto;
+  background-position: 0% 50%;
+  transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.btn1:hover{
+  background-position: 100% 50%;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(251, 9, 180, 0.35);
+}
+
+.btn1:active{
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(251, 9, 180, 0.3);
 }
 
 .btn2{
@@ -37,6 +52,116 @@ body{
   background: transparent;
   border: 1px solid #00FF88;
   color: #00FF88;
+   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn2:hover{
+  background-color: #00FF88;
+  color: #1A0B2E;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 255, 136, 0.35);
+}
+
+.btn2:active{
+  transform: translateY(-1px);
+}
+/* nav bar    */
+
+.btn1 .fa-arrow-right{
+  transition: transform 0.25s ease;
+}
+
+.btn1:hover .fa-arrow-right{
+  transform: translateX(4px);
+}
+
+.options a {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.options a:hover {
+  transform: translateY(-6px);
+  background: linear-gradient(30deg, #F7E93F 14%, #FB09B4 51%, #9100F8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.options ul{
+  list-style: none;
+  display: flex;
+  width:218px;
+  justify-content: space-between;
+}
+
+header{
+  max-width:1200px;
+  margin:0 auto;
+  position: relative; 
+}
+
+header nav {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:16px 200px;
+  height: 80px;
+  overflow: hidden;
+  margin:0 auto;
+  border-bottom:1px solid #412567;
+}
+
+
+
+/* aside / mobile sidebar        */
+
+
+#sidebar-active{
+  display: none;
+}
+
+.open-sidebar-button{
+  display:none;
+  cursor: pointer;
+}
+
+.close-sidebar-button{
+  display: none;
+  cursor: pointer;
+}
+
+
+.mobile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -5px 0 5px rgba(0, 0, 0, 0.26);
+  padding: 20px;
+  border-radius: 20px;
+  gap:32px;
+  position:fixed;
+  top: 80px;
+  right: -320px; 
+  z-index: 10;
+  width:300px;
+  background-color:rgba(37, 13, 68, 0.89);
+  transition: right 0.3s ease;
+}
+
+.mobile .options ul{
+  flex-direction: column;
+  align-items: flex-start;
+  gap:32px;
+}
+
+.mobile .options ul a{
+  box-sizing: border-box;
+  height: auto;
+  width: 100%;
 }
 
 
@@ -398,103 +523,13 @@ footer{
 }
 
 
-/* ============================= */
-/* nav bar                       */
-/* ============================= */
-
-.options a {
-  display: inline-block;
-  color: rgba(255, 255, 255, 0.9);
-  text-decoration: none;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.options a:hover {
-  transform: translateY(-6px);
-  background: linear-gradient(30deg, #F7E93F 14%, #FB09B4 51%, #9100F8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.options ul{
-  list-style: none;
-  display: flex;
-  width:218px;
-  justify-content: space-between;
-}
-
-header{
-  max-width:1200px;
-  margin:0 auto;
-  position: relative; /* needed so aside/.mobile positions relative to this stacking context */
-}
-
-header nav {
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-  padding:16px 200px;
-  height: 80px;
-  overflow: hidden;
-  margin:0 auto;
-  border-bottom:1px solid #412567;
-}
-
-
-/* ============================= */
-/* aside / mobile sidebar        */
-/* ============================= */
-
-#sidebar-active{
-  display: none;
-}
-
-.open-sidebar-button{
-  display:none;
-  cursor: pointer;
-}
-
-.close-sidebar-button{
-  display: none;
-  cursor: pointer;
-}
-
-
-.mobile{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: -5px 0 5px rgba(0, 0, 0, 0.26);
-  padding: 20px;
-  border-radius: 20px;
-  gap:32px;
-  position:fixed;
-  top: 80px;
-  right: -320px; 
-  z-index: 10;
-  width:300px;
-  background-color:rgba(37, 13, 68, 0.89);
-  transition: right 0.3s ease;
-}
-
-.mobile .options ul{
-  flex-direction: column;
-  align-items: flex-start;
-  gap:32px;
-}
-
-.mobile .options ul a{
-  box-sizing: border-box;
-  height: auto;
-  width: 100%;
-}
-
 
 @media (max-width: 576px) {
 
   /* nav bar (mobile) */
+
+
+  
   header nav{
     display:flex;
     justify-content: space-between;
@@ -513,7 +548,6 @@ header nav {
     display: none;
   }
 
-  /* checkbox + label toggle logic (siblings inside <nav> — this part works fine) */
   #sidebar-active:checked ~ .open-sidebar-button{
     display: none;
   }
@@ -523,13 +557,10 @@ header nav {
     z-index: 11;
   }
 
-  /* FIX: .mobile is NOT a sibling of the checkbox (it's nested inside <aside>,
-     a sibling of <nav>). :has() lets us reach it via the shared <header> ancestor. */
   header:has(#sidebar-active:checked) .mobile{
     right: 0;
   }
 
-  /* optional: dim the rest of the page while the menu is open */
   header:has(#sidebar-active:checked)::after{
     content: "";
     position: fixed;
